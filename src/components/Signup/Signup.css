@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+:root {
+  --modal-duration: 1s;
+}
+
+.modal-container {
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.modal-container.show-modal {
+  display: block;
+}
+
+.modal {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  width: 600px;
+  animation-name: modalopen;
+  animation-duration: var(--modal-duration);
+}
+
+.modal-header {
+  background: var(--primary-color);
+  color: #fff;
+  padding: 15px;
+}
+
+.modal-header h3 {
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.modal-content {
+  padding: 40px;
+}
+
+.modal-content p {
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin: 30px 0;
+}
+
+.form-group label {
+  border: 0;
+  margin: 0;
+  padding: 0
+}
+
+.form-group input {
+  border: 0;
+  margin: 0;
+  padding: 0
+}
+
+.form-validation-error {
+  border: 0;
+  margin: 10px 0;
+  padding: 0;
+}
+
+.close-btn {
+  background: transparent;
+  font-size: 30px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.error-msg {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: .8em;
+  border: 0;
+  color: red;
+}
+
+#error-img {
+  width: auto;
+  height: 1.5em;
+  margin-right: 10px;
+}
+
+
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

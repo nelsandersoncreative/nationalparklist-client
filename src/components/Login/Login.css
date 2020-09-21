@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+:root {
+  --modal-duration: 1s;
+}
+
+.login-container {
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.login-container.show-login {
+  display: block;
+}
+
+.login {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  width: 600px;
+  animation-name: modalopen;
+  animation-duration: var(--modal-duration);
+}
+
+.login-header {
+  background: var(--primary-color);
+  color: #fff;
+  padding: 15px;
+}
+
+.login-header h3 {
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.login-content {
+  padding: 20px;
+}
+
+.login-form div {
+  margin: 0;
+}
+
+.login-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.login-form input {
+  display: block;
+  margin: 0px 0px 10px 0px;
+}
+
+button.submit-btn {
+  margin: 0;
+  width: 100%;
+  display: block;
+}
+
+.login-form .form-input {
+  padding: 8px;
+  width: 100%;
+}
+
+.close-btn {
+  background: transparent;
+  font-size: 30px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: underline;
+}
+
+.error-msg {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 20px;
+  font-size: .8em;
+  border: 0;
+  color: red;
+}
+
+#error-img {
+  width: auto;
+  height: 1.5em;
+  margin-right: 10px;
+}
+
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

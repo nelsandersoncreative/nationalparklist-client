@@ -1,0 +1,27 @@
+.about-h2 {
+  text-align: left;
+}
+
+.about-text {
+  text-align: left;
+}
+
+.about-subtext {
+  text-align: left;
+}
+
+.about-apis {
+  font-size: 20px;
+}
+
+.api-cont {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+h3 {
+  text-align: left !important;
+}
