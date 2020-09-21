@@ -28,7 +28,7 @@ class Signup extends Component {
   handleSubmit = async e => {
     e.preventDefault();
     this.setState({error: null})
-    const { user_name: user_name, email: user_email, password: user_password } = this.state
+    const { user_name, email: user_email, password: user_password } = this.state
     const { setLoading, login, setCurrentUser, hideModalFunc } = this.context;
     const newUser = {
       user_name, 

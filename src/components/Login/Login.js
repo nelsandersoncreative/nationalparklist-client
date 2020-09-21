@@ -62,12 +62,12 @@ class Login extends Component {
               <div className='error-msg'>{error ? <img id="error-img" src={ErrorImage} alt="error" /> : null}{error}</div>
                 <div className='form-group'>
                   <label htmlFor='email'>Email</label>
-                  <input id='email' name='email' type='text' value={this.state.email} onChange={this.handleChange}  autoComplete="on"/>
+                  <input id='email' name='email' type='text' value={email} onChange={this.handleChange}  autoComplete="on"/>
                 </div>
 
                 <div className='form-group'>
                   <label htmlFor='password'>Password</label>
-                  <input id='password' name='password' type='password' value={this.state.password} onChange={this.handleChange} autoComplete="on"/>
+                  <input id='password' name='password' type='password' value={password} onChange={this.handleChange} autoComplete="on"/>
                 </div>
                 <div className='form-controls'>
                   <button className='button full outline' type='submit'>Login</button>

@@ -1,8 +1,8 @@
 let apiPath;
 let tokenKey;
 if (process.env.NODE_ENV === 'production') {
-  apiPath = 'https://nationalparklist-api.herokuapp.com/api'
-  tokenKey = 'nationalparklist-prod-auth-token'
+  apiPath = 'https://lit-scrubland-97984.herokuapp.com/'
+  tokenKey = process.env.REACT_APP_API_KEY_TWO
 } else {
   apiPath = 'http://localhost:8000/api'
   tokenKey = 'nationalparklist-auth-token'
