@@ -113,7 +113,7 @@ class Park extends Component {
               </ul>
             </div>
           </div>
-          <div className="card text-center">
+          <div className="park-contact-info">
             <div className="badge badge-primary">{phoneNumber}</div>
             <div className="badge badge-success">{emailAddress}</div>
             { designation && <div className="badge badge-light">{designation}</div> }
