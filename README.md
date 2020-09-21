@@ -1,7 +1,7 @@
 # National Park List Client
 Find National Parks in the United States that you want to visit and save parks to a list that you create.
 
-This repo is the front-end client, built in React.  You can see the app live at CURRENTLY DEAD LINKS --> [https://nationalparklist](https://nationalparklist)
+This repo is the front-end client, built in React.  You can see the app live at [https://nationalparklist-client.vercel.app/](https://nationalparklist-client.vercel.app/)
 
 The app is meant for desktop use, but will still scale for tablet and mobile viewing.
 
@@ -44,8 +44,9 @@ With so much information available on the web having a clear and concise encapsu
 National Park Service: https://www.nps.gov/subjects/developer/get-started.htm
 Open Weather API (Free account): https://openweathermap.org/price
 
-2. Create a `.env` file in the project root and put in the api keys:
+2. Create a `.env` and `.env.local` file in the project root and put the following in each file:
 REACT_APP_API_KEY='api_key=`<NPS API KEY GOES HERE>`'
+REACT_APP_API_KEY_TWO=`<HEROKU API KEY GOES HERE>`
 REACT_APP_OPENWEATHER_API_KEY='appid=`<OPENWEATHER API KEY GOES HERE>`'
 
 3. Run `npm install` to load dependencies
@@ -54,7 +55,7 @@ REACT_APP_OPENWEATHER_API_KEY='appid=`<OPENWEATHER API KEY GOES HERE>`'
 
 This is only the front end client, so develop locally you'll need the backend server as well.
 
-To get the backend up and running see CURRENTLY DEAD LINKS --> [https://github.com/nelsandersoncreative/nationalparkcapstone/tree/master/server](https://github.com/nelsandersoncreative/nationalparkcapstone/tree/master/server)
+To get the backend up and running see CURRENTLY DEAD LINKS --> [https://github.com/nelsandersoncreative/nationalparklist-server](https://github.com/nelsandersoncreative/nationalparklist-server)
 
 Deployments are handled through Vercel and can be run via `npm run deploy`
 
