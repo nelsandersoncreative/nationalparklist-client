@@ -47,9 +47,13 @@ National Park Service: https://www.nps.gov/subjects/developer/get-started.htm
 Open Weather API (Free account): https://openweathermap.org/price
 
 2. Create a `.env` and `.env.local` file in the project root and put the following in each file:
+
+````
 REACT_APP_API_KEY='api_key=`<NPS API KEY GOES HERE>`'
 REACT_APP_API_KEY_TWO=`<HEROKU API KEY GOES HERE>`
 REACT_APP_OPENWEATHER_API_KEY='appid=`<OPENWEATHER API KEY GOES HERE>`'
+
+````
 
 3. Run `npm install` to load dependencies
 
