@@ -18,7 +18,9 @@ With so much information available on the web having a clear and concise encapsu
 
 ## Quick App Demo
 
-// add imgur link
+| col 1      | col 2      |
+|------------|-------------|
+| <img src="/public/favicon-16x16.png" width="250"> | <img src="/public/favicon-16x16.png" width="250"> |
 
 ## Technology
 
