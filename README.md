@@ -16,11 +16,11 @@ To check out the app, you can use the following dummy account to see the onboard
 
 With so much information available on the web having a clear and concise encapsulation of what National Parks exist in a given area can be tough to find, sometimes there is a National Park nearby that you never knew about. National Park List uses the National Park Service API and the Open Weather API to provide you with up to date information about parks, current weather, activities, map coordinates, contact information and all other pertinent information you may be looking for. If you want to find a new and exciting National Park - National Park List is your plan.
 
-## Quick App Demo
+## Screenshots
 
-| Home       | About       | Search     | Park        |
+| Home       | About       | Search     | Parks       |
 |------------|-------------|------------|-------------|
-| <img src="/public/favicon-16x16.png" width="250"> | <img src="/public/favicon-16x16.png" width="250"> | <img src="/public/favicon-16x16.png" width="250"> | <img src="/public/favicon-16x16.png" width="250"> |
+| <img src="/public/home.png" width="250"> | <img src="/public/about.png" width="250"> | <img src="/public/search.png" width="250"> | <img src="/public/parks.png" width="250"> |
 
 ## Technology
 
