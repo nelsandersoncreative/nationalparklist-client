@@ -18,9 +18,9 @@ With so much information available on the web having a clear and concise encapsu
 
 ## Quick App Demo
 
-| col 1      | col 2      |
-|------------|-------------|
-| <img src="/public/favicon-16x16.png" width="250"> | <img src="/public/favicon-16x16.png" width="250"> |
+| Home       | About       | Search     | Park        |
+|------------|-------------|------------|-------------|
+| <img src="/public/favicon-16x16.png" width="250"> | <img src="/public/favicon-16x16.png" width="250"> | <img src="/public/favicon-16x16.png" width="250"> | <img src="/public/favicon-16x16.png" width="250"> |
 
 ## Technology
 
