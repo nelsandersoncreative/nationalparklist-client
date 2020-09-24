@@ -2,7 +2,6 @@ import React, {Component, createContext} from 'react'
 import axios from 'axios';
 import config from '../config';
 
-// import AuthApiService from '../services/auth-api-service';
 import TokenService from '../services/TokenService'
 
 //1. initialize context
@@ -61,21 +60,6 @@ export class AppProvider extends Component {
     userParkList: [
     ]
   }
-
-  // async componentDidMount() {
-  //   this.getCurrentUser()
-  //  }
- 
-  // async getCurrentUser() {
-  //   if (TokenService.hasAuthToken()) {
-  //     try {
-  //       const user = await AuthApiService.getCurrentUser()
-  //       this.setState({currentUser: user})
-  //     } catch(err) {
-  //       this.setState({error: err.message})
-  //     }
-  //   }
-  // }
 
   setCurrentUser = userObject => {
     this.setState({ currentUser: userObject });
@@ -213,51 +197,6 @@ export class AppProvider extends Component {
   };
 
   addParkToList = async parkObject => {
-    
-    // const filler = this.state.userParkList[0].parkCode;
-    // if (filler === 'xxxx' ) {
-      
-    //   const { parkCode } = parkObject;
-    //   try {
-       
-    //     //remove xxxx placeholder
-    //     const remove = await fetch(`${config.API_ENDPOINT}/user-parks/remove-park/xxxx`, {
-    //       method: 'PUT',
-    //       headers: {
-    //         'Content-Type': 'application/json',
-    //         'Authorization': `Bearer ${TokenService.getAuthToken()}`
-          
-    //       },
-    //       body: JSON.stringify({
-    //         id: this.state.currentUser.id,
-    //         index: '0'
-    //       })
-    //     });
-    //     const removed = await remove.json()
-    //     // const oldArray = this.state.userParkList;
-    //     // oldArray.splice(0, 1);
-    //     // this.setState({ userParkList: oldArray });
-    //     try {
-    //     //add new park
-    //     const res = await fetch(`${config.API_ENDPOINT}/user-parks/add-park/${parkCode}`, {
-    //     method: 'PUT',
-    //     headers: {
-    //       'Content-Type': 'application/json',
-    //       'Authorization': `Bearer ${TokenService.getAuthToken()}`
-        
-    //     },
-    //     body: JSON.stringify({
-    //       id: this.state.currentUserId
-    //     })
-    //   })
-    //   this.setState({ userParkList: [parkObject] });
-    //   const result = await res.json();
-    //   return { result: result, removed: removed};    
-      
-    //   } catch (err) {
-    //     console.error({ msg: err });
-    //   }
-    // } else {
     const { parkCode } = parkObject;
     try {
     const res = await fetch(`${config.API_ENDPOINT}/user-parks/add-park/${parkCode}`, {
@@ -281,15 +220,6 @@ export class AppProvider extends Component {
   
   // record the index of the item clicked, obtain current list, splice it out, reset state with new length
   removeParkFromList = async (arrayIndex, parkCode) => {
-    // if (this.state.userParkList.length === 1) {
-    //   this.addParkToList(
-    //     {
-    //        parkCode: "xxxx",
-    //        parkName: "Your park list will display here",
-    //        parkCity: "once you add parks to it!"
-    //      }
-    //    );
-    // }
     const res = await fetch(`${config.API_ENDPOINT}/user-parks/remove-park/${parkCode}`, {
       method: 'PUT',
       headers: {

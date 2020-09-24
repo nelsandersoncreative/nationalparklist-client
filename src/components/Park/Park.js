@@ -8,7 +8,6 @@ import Spinner from '../Spinner/Spinner';
 import './Park.css';
 
 
-//TODO move these to a utils file
 const toKelvin = temp => Math.floor((temp - 273.15)* 1.8000+ 32.00) + ' °F';
 
 const formatPhoneNumber = number => {
