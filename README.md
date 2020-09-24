@@ -5,7 +5,7 @@ This repo is the front-end client, built in React.  You can see the app live at 
 
 The app is meant for desktop use, but will still scale for tablet and mobile viewing.
 
-To check out the app, you can use the following dummy account to see the onboarding experience:
+To check out the app, you can create an account or use the following dummy account to see the onboarding experience:
 
 #### Demo Account Details
 
@@ -14,7 +14,7 @@ To check out the app, you can use the following dummy account to see the onboard
 
 ## Introduction
 
-With so much information available on the web having a clear and concise encapsulation of what National Parks exist in a given area can be tough to find, sometimes there is a National Park nearby that you never knew about. National Park List uses the National Park Service API and the Open Weather API to provide you with up to date information about parks, current weather, activities, map coordinates, contact information and all other pertinent information you may be looking for. If you want to find a new and exciting National Park - National Park List is your plan.
+With so much information available on the web, having a clear and concise encapsulation of what National Parks exist in the United states in a given area can be tough to find, sometimes there is a National Park nearby that you never knew about. National Park List uses the National Park Service API and the Open Weather API to provide you with up to date information about U.S. National Parks, their current weather, activities, latitude/longitude coordinates, contact information and all other pertinent information you may be looking for. If you want to find a new and exciting National Park - National Park List is your answer.
 
 ## Screenshots
 
