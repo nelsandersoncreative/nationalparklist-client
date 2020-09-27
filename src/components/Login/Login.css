@@ -38,6 +38,7 @@
   background: var(--primary-color);
   color: #fff;
   padding: 15px;
+
 }
 
 .login-header h3 {
@@ -104,6 +105,16 @@ button.submit-btn {
   margin-right: 10px;
 }
 
+.to-register-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.to-register-paragraph-2 {
+  padding-left: 10px;
+}
+
 @keyframes modalopen {
   from {
     opacity: 0;
@@ -111,5 +122,16 @@ button.submit-btn {
 
   to {
     opacity: 1;
+  }
+}
+
+@media (max-width: 780px) {
+  h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .to-register-paragraph-1, .to-register-paragraph-2 {
+    font-size: 10px;
   }
 }

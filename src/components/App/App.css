@@ -497,12 +497,12 @@ button:focus {
     margin: 20px 0px;
   }
 
-  .render-loading {
-    font-size: 30px;
+  .last {
+    margin-bottom: 50px;
   }
 
-  imput[type="submit"], button {
-
+  .render-loading {
+    font-size: 30px;
   }
 
 }
