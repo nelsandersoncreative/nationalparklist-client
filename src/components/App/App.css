@@ -499,7 +499,7 @@ button:focus {
     font-size: 30px;
   }
 
-  button {
+  imput[type="submit"], button {
     -webkit-appearance: none;
   }
 
