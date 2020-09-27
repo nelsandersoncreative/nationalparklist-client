@@ -23,18 +23,12 @@ const Parks = ({ parks }) => {
    } else {
       return parks.length === 0
         ? <h1>No Parks Found.</h1>
-        : <div style={userStyle}>
+        : <div className="grid-3">
             {parks.map(park => (
               <ParkItem addParkToList={addParkToList} key={park.id} park={park}/>
             ))}
           </div>
     }
-}
-
-const userStyle = {
-  display: "grid",
-  gridTemplateColumns: "repeat(3, 1fr)",
-  gridGap: "1rem"
 }
 
 export default withAppContext(Parks);

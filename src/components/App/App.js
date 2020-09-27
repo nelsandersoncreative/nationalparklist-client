@@ -68,28 +68,20 @@ class App extends Component {
                     
                     {hasAuth ? <div>
                     <h1>How to Create Your National Park List:</h1>
-                    <p className="landing-text">1. Make a search for a national park based on anything.  Seach by State, activities, weather, city, lat/long coordinates, etc.
-                    <br/>
-                    2. The app will provide information for United States National Parks relating to your search.
-                    <br/>
-                    3. On search results, click "more" to learn more about a given park.
-                    <br/>
-                    4. click "Add Park To List" to add a park to your list
-                    </p>
+                    <p className="landing-text first">1. Make a search for a national park based on anything.  Seach by State, activities, weather, city, lat/long coordinates, etc.</p>
+                    <p className="landing-text">2. The app will provide information for United States National Parks relating to your search.</p>
+                    <p className="landing-text">3. On search results, click "more" to learn more about a given park.</p>
+                    <p className="landing-text">4. click "Add Park To List" to add a park to your list</p>
                     </div> : null}
                     <div className="text-container">
                     
                     {!hasAuth ? 
                     <div>
                     <h1>Welcome to National Park List!</h1>
-                    <p className="landing-text">1. Make a search for a national park based on anything.  Seach by State, activities, weather, city, lat/long coordinates, etc.
-                    <br/>
-                    2. The app will provide information for United States National Parks relating to your search.
-                    <br/>
-                    3. On search results, click "more" to learn more about a given park.
-                    <br/>
-                    4. To create your own National Park list and add parks to your list, click "Sign Up".
-                    </p>
+                    <p className="landing-text first">1. Make a search for a national park based on anything.  Seach by State, activities, weather, city, lat/long coordinates, etc.</p>
+                    <p className="landing-text">2. The app will provide information for United States National Parks relating to your search.</p>
+                    <p className="landing-text">3. On search results, click "more" to learn more about a given park.</p>
+                    <p className="landing-text last">4. To create your own National Park list and add parks to your list, click "Sign Up".</p>
                     <button className="cta-btn" id="open" onClick={showModalFunc}>Sign Up</button>
                     </div> : null}
                     </div>

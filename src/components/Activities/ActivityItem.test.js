@@ -9,4 +9,4 @@ describe('ActivityItem Component', () => {
     ReactDOM.render(< ActivityItem activity={activity} />, div);
     ReactDOM.unmountComponentAtNode(div);
   });
-})
+});

@@ -4,7 +4,7 @@
 /* Global Styles */
 :root {
   --primary-color: blue;
-  --dark-color: #333333;
+  --dark-color: blue;
   --light-color: #f4f4f4;
   --danger-color: #dc3545;
   --success-color: green;
@@ -62,8 +62,18 @@ img {
   padding: 0 2rem;
 }
 
-.container p {
-  margin: 20px 0;
+.landing-text {
+  padding: 5px;
+}
+
+.first {
+  margin-top: 20px;
+}
+
+.last {
+  text-align: left;
+  padding: 5px;
+  margin-bottom: 50px;
 }
 
 /* Text Styles*/
@@ -451,9 +461,30 @@ p, h1, h2, h3, h4, h5 {
   margin: 15px;
 }
 
+/* Tablet Styles */
+@media (max-width: 780px) {
+  .navbar {
+    flex-direction: column;
+  }
+  .grid-3 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+  }
+  
+  .landing-text {
+    margin: 20px 0px;
+  }
+
+}
 
 /* Mobile Styles */
 @media (max-width: 700px) {
+
+  .navbar-main {
+    font-size: 35px;
+  }
+
   .hide-sm {
     display: none;
   }
