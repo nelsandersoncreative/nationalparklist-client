@@ -25,8 +25,10 @@ export const Dashboard = () => {
             const code = `/park/${park.parkCode}`;
             return (
               <div className="park-grid-item" key={index}>
-                {<Link to={`${code}`} className="parkList-link">{name}</Link>}
-                <p className="parkcity">{city}</p>
+                <div>
+                  {<Link to={`${code}`} className="parkList-link">{name}</Link>}
+                  <p className="parkcity">{city}</p>
+                </div>
                 <button className="dash-delete" onClick={() => removeParkFromList(index, park.parkCode)}>Delete park</button>
               </div>
             )

@@ -1,6 +1,5 @@
 import React from 'react';
 import '../App/App.css';
-// import PropTypes from 'prop-types';
 
 const ActivityItem = ({ activity }) => {
     return (
@@ -11,9 +10,5 @@ const ActivityItem = ({ activity }) => {
       </div>
     )  
 }
-
-// ActivityItem.propTypes = {
-//   // activity: PropTypes.object.isRequired
-// }
 
 export default ActivityItem;

@@ -9,7 +9,7 @@ import { withAppContext } from '../../contexts/AppContext'
 const ParkItem = ({ park }) => {
 
   const appContext = useContext(AppContext);
-  const { hasAuth, addParkToList, showModalFunc } = appContext;
+  const { hasAuth, userParkList, addParkToList, showModalFunc } = appContext;
 
   const cityFormat = parkAddress => {
     if (parkAddress === undefined) {
@@ -40,13 +40,25 @@ const ParkItem = ({ park }) => {
     parkCity: `${city}, ${state}` 
   }
 
+  const userParkSearch = parkItemCode => {
+    for (let i = 0; i < userParkList.length; i++) {
+      if (userParkList[i].parkCode === parkItemCode) {
+        return true;
+      }
+    }
+  }
+
     return (
         <div className="card text-center">
           <img src={image} alt="park" className="round-img" style={{ height: '60px', width: '60px' }}/>
           <h3 className="park-item-h3">{name}</h3>
           <div><Link to={`/park/${parkCode}`} className="btn btn-dark btn-sm my-1">More</Link></div>
           <div>
-            <button onClick={hasAuth ? () => addParkToList(parkObject) : () => showModalFunc(true)} className="btn btn-dark btn-sm my-1"><i className="fas fa-plus"></i>Add Park To List</button></div>
+            {
+              userParkSearch(parkCode) === true ? <p>Park has been added to your list!</p> : 
+              <button onClick={hasAuth ? () => addParkToList(parkObject) : () => showModalFunc(true)} className="btn btn-dark btn-sm my-1"><i className="fas fa-plus"></i>Add Park To List</button>
+            }
+          </div>
         </div>
     )
 }

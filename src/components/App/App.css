@@ -92,7 +92,7 @@ img {
 
 .first {
   margin: 0;
-  padding: 0;
+  padding: 5px;
 }
 
 .last {
@@ -484,12 +484,8 @@ p, h1, h2, h3, h4, h5 {
 .parks-grid {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(5, 1fr);
   text-align: center;
-}
-
-.park-grid-item {
-  margin: 15px;
 }
 
 /* Signup */
@@ -517,6 +513,7 @@ button:focus {
 
 /* Tablet Styles */
 @media (max-width: 780px) {
+
   .navbar {
     flex-direction: column;
   }
@@ -554,6 +551,12 @@ button:focus {
 
   .demo-cred-container {
     padding: 10px 20px 20px 20px;
+  }
+
+  .parks-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    text-align: left;
   }
 
 }

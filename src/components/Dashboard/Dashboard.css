@@ -1,13 +1,14 @@
 .park-grid-item {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   border: 4px solid blue;
   border-radius: 20px;
   background-color: blue;
   color: white;
   padding: 10px;
+  margin: 15px;
 }
 
 .user-dash {
@@ -36,4 +37,10 @@ p.parks-header-dash {
   margin-top: 20px;
   background-color: white;
   color: blue;
+}
+
+@media (max-width: 780) {
+  .park-grid-item {
+    flex-direction: row;
+  }
 }
