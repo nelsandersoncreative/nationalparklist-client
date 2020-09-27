@@ -73,7 +73,11 @@ img {
 .last {
   text-align: left;
   padding: 5px;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+}
+
+.text-container {
+  margin-bottom: 40px;
 }
 
 /* Text Styles*/
@@ -498,7 +502,7 @@ button:focus {
   }
 
   .last {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
   }
 
   .render-loading {

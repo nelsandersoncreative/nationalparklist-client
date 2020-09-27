@@ -82,7 +82,7 @@ class App extends Component {
                     <p className="landing-text">2. The app will provide information for United States National Parks relating to your search.</p>
                     <p className="landing-text">3. On search results, click "more" to learn more about a given park.</p>
                     <p className="landing-text last">4. To create your own National Park list and add parks to your list, click "Sign Up".</p>
-                    <button className="cta-btn" id="open" onClick={showModalFunc}>Sign Up</button>
+                    <button className="cta-btn home-signup" id="open" onClick={showModalFunc}>Sign Up</button>
                     </div> : null}
                     </div>
                   <Search
