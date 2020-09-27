@@ -461,6 +461,25 @@ p, h1, h2, h3, h4, h5 {
   margin: 15px;
 }
 
+/* Signup */
+button, input[type='submit'] {
+  background-color: var(--primary-color);
+  border: 0;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  padding: 8px 12px;
+}
+
+button:focus {
+  outline: none;
+}
+
+.cta-btn {
+  padding: 12px 30px;
+  font-size: 20px;
+}
+
 /* Tablet Styles */
 @media (max-width: 780px) {
   .navbar {
@@ -481,6 +500,10 @@ p, h1, h2, h3, h4, h5 {
 /* Mobile Styles */
 @media (max-width: 700px) {
 
+  .btn, .btn-block, .btn-dark {
+
+  }
+  
   .navbar-main {
     font-size: 35px;
   }
@@ -518,24 +541,4 @@ p, h1, h2, h3, h4, h5 {
     text-align: center;
     justify-content: center;
   }
-}
-
-
-/* Signup */
-button, input[type='submit'] {
-  background-color: var(--primary-color);
-  border: 0;
-  border-radius: 5px;
-  color: #fff;
-  cursor: pointer;
-  padding: 8px 12px;
-}
-
-button:focus {
-  outline: none;
-}
-
-.cta-btn {
-  padding: 12px 30px;
-  font-size: 20px;
 }
