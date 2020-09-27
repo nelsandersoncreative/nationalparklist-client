@@ -34,7 +34,7 @@ class Search extends Component {
           value={this.state.text} 
           onChange={this.onChange}
           autoComplete="on"/>
-        <input type="submit" value="Search" className="btn btn-dark btn-block"  autoComplete="on"/>
+        <input type="submit" value="Search" className="btn btn-dark btn-block" />
       </form>
       {showClear && <button 
         className="btn btn-light btn-block"

@@ -100,7 +100,6 @@ class Park extends Component {
                     </Fragment>
                   }
                 </li>
-                <br/>
                 <li>
                   {directionsInfo &&
                     <Fragment>
