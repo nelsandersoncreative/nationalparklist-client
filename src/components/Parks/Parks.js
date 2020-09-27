@@ -16,7 +16,7 @@ const Parks = ({ parks }) => {
     if (!parks && isLoading) {
       return (
         <Fragment>
-          <h1 style={{ width: "400px", margin: "auto", display: "block" }}>Retrieving National Parks Information!</h1>
+          <h1 className="render-loading">Retrieving National Parks Information!</h1>
           <Spinner />
         </Fragment>
       )

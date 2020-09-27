@@ -16,3 +16,16 @@
   border: #ccc 1px dotted;
   margin: 0.7rem 0;
 }
+
+@media (max-width: 780px) {
+  .render-loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  h3 {
+    font-size: 10px;
+  }
+}

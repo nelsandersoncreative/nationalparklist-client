@@ -495,14 +495,14 @@ button:focus {
     margin: 20px 0px;
   }
 
+  .render-loading {
+    font-size: 30px;
+  }
+
 }
 
 /* Mobile Styles */
 @media (max-width: 700px) {
-
-  .btn, .btn-block, .btn-dark {
-
-  }
   
   .navbar-main {
     font-size: 35px;
