@@ -499,6 +499,10 @@ button:focus {
     font-size: 30px;
   }
 
+  button {
+    -webkit-appearance: none;
+  }
+
 }
 
 /* Mobile Styles */
