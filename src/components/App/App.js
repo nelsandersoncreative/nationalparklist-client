@@ -60,36 +60,36 @@ class App extends Component {
             {hasAuth ? <Dashboard /> : null}
             <div className="container">
             <Switch>
-              <Route
-              exact
-              path='/'
-              render={ props => (
+              <Route exact path='/' render={ props => (
                 <Fragment>
-                    
-                    {hasAuth ? <div>
-                    <h1>How to Create Your National Park List:</h1>
-                    <p className="landing-text first">1. Make a search for a national park based on anything.  Seach by State, activities, weather, city, lat/long coordinates, etc.</p>
-                    <p className="landing-text">2. The app will provide information for United States National Parks relating to your search.</p>
-                    <p className="landing-text">3. On search results, click "more" to learn more about a given park.</p>
-                    <p className="landing-text">4. click "Add Park To List" to add a park to your list</p>
-                    </div> : null}
-                    <div className="text-container">
-                    
-                    {!hasAuth ? 
-                    <div>
-                    <h1>Welcome to National Park List!</h1>
-                    <div className="demo-cred-container">
-                      <h2 className="landing-text first">Demo Login Account:</h2>
-                      <p className="landing-demo">Email:  sampleuser@sampleuser.com</p>
-                      <p className="landing-demo">Password:  foobar</p>
-                    </div>
-                    <p className="landing-text">1. Make a search for a national park based on anything.  Seach by State, activities, weather, city, lat/long coordinates, etc.</p>
-                    <p className="landing-text">2. The app will provide information for United States National Parks relating to your search.</p>
-                    <p className="landing-text">3. On search results, click "more" to learn more about a given park.</p>
-                    <p className="landing-text last">4. To create your own National Park list and add parks to your list, click "Sign Up".</p>
-                    <button className="cta-btn home-signup" id="open" onClick={showModalFunc}>Sign Up</button>
-                    </div> : null}
-                    </div>
+                  {
+                    hasAuth ? 
+                      <div>
+                        <h1>How to Create Your National Park List:</h1>
+                        <p className="landing-text first">1. Make a search for a national park based on anything.  Seach by State, activities, weather, city, lat/long coordinates, etc.</p>
+                        <p className="landing-text">2. The app will provide information for United States National Parks relating to your search.</p>
+                        <p className="landing-text">3. On search results, click "more" to learn more about a given park.</p>
+                        <p className="landing-text">4. click "Add Park To List" to add a park to your list</p>
+                      </div> : null
+                  }
+                  <div className="text-container">
+                    {
+                      !hasAuth ? 
+                        <div>
+                          <h1>Welcome to National Park List!</h1>
+                          <div className="demo-cred-container">
+                            <h2 className="landing-text first">Demo Login Account:</h2>
+                            <p className="landing-demo">Email:  sampleuser@sampleuser.com</p>
+                            <p className="landing-demo">Password:  foobar</p>
+                          </div>
+                          <p className="landing-text">1. Make a search for a national park based on anything.  Seach by State, activities, weather, city, lat/long coordinates, etc.</p>
+                          <p className="landing-text">2. The app will provide information for United States National Parks relating to your search.</p>
+                          <p className="landing-text">3. On search results, click "more" to learn more about a given park.</p>
+                          <p className="landing-text last">4. To create your own National Park list and add parks to your list, click "Sign Up".</p>
+                          <button className="cta-btn home-signup" id="open" onClick={showModalFunc}>Sign Up</button>
+                        </div> : null
+                    }
+                  </div>
                   <Search
                     showClear={(parks.data && parks.data.length> 0 ) ? true : false }/>
                   <Parks parks={parks.data} />
@@ -97,17 +97,11 @@ class App extends Component {
               )}>
               </Route>
               <Route exact path='/about' component={About}/>
-              <Route 
-                exact 
-                path='/park/:parkCode' 
-                render={props => (
-                  <Park
-                    {...props} 
-                    park={park}
-                  />
+              <Route exact path='/park/:parkCode' 
+              render={ props => ( 
+                <Park {...props} park={park} /> 
                 )} 
               />
-                
             </Switch>
             </div>
           </div>  
