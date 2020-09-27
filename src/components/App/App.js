@@ -78,7 +78,12 @@ class App extends Component {
                     {!hasAuth ? 
                     <div>
                     <h1>Welcome to National Park List!</h1>
-                    <p className="landing-text first">1. Make a search for a national park based on anything.  Seach by State, activities, weather, city, lat/long coordinates, etc.</p>
+                    <div className="demo-cred-container">
+                      <h2 className="landing-text first">Demo Login Account:</h2>
+                      <p className="landing-demo">Email:  sampleuser@sampleuser.com</p>
+                      <p className="landing-demo">Password:  foobar</p>
+                    </div>
+                    <p className="landing-text">1. Make a search for a national park based on anything.  Seach by State, activities, weather, city, lat/long coordinates, etc.</p>
                     <p className="landing-text">2. The app will provide information for United States National Parks relating to your search.</p>
                     <p className="landing-text">3. On search results, click "more" to learn more about a given park.</p>
                     <p className="landing-text last">4. To create your own National Park list and add parks to your list, click "Sign Up".</p>
