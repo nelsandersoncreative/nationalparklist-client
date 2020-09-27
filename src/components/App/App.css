@@ -342,6 +342,7 @@ img {
 /* Forms */
 input {
   margin: 1.2rem 0;
+  -webkit-appearance: none;
 }
 
 .form-text {
@@ -366,6 +367,7 @@ textarea {
 input[type='submit'],
 button {
   font: inherit;
+  -webkit-appearance: none;
 }
 
 table th,
@@ -500,7 +502,7 @@ button:focus {
   }
 
   imput[type="submit"], button {
-    -webkit-appearance: none;
+
   }
 
 }
