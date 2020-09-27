@@ -17,6 +17,25 @@
   margin: 0.7rem 0;
 }
 
+.entrance-fee-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-content: flex-end;
+  margin: 25px 15px 30px 0px;
+  padding-left: 20px;
+  text-align: left;
+}
+
+.entrance-fee-span {
+  font-size: 15px;
+  margin-right: 15px;
+}
+
+.entrance-fee {
+  font-size: 15px;
+}
+
 @media (max-width: 780px) {
   .render-loading-container {
     display: flex;
@@ -25,7 +44,21 @@
     width: 100%;
   }
 
+  .park-page-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-self: flex-start;
+  }
+
   h3 {
     font-size: 10px;
+  }
+}
+
+@media (max-width: 700px) {
+  .entrance-fee {
+    font-size: 10px;
+    margin-top: 6px;
   }
 }

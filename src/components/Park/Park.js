@@ -68,8 +68,10 @@ class Park extends Component {
 
     return (
         <Fragment>
-          <Link to='/' className='btn btn-light'>Back to Search</Link>
-          Entrance fee: {entrenceFee}
+          <div className="park-page-header">
+            <Link to='/' className='btn btn-light'>Back to Search</Link>
+            <div className="entrance-fee-container"><p className="entrance-fee-span">Entrance fee:</p> <p className="entrance-fee">{entrenceFee}</p></div>
+          </div>
           <div className="className card grid-2">
             <div className="all-center">
               { <img src={imageUrl} className="round-img" alt="" style={{ width: "150px", height: "150px" }}/> }
