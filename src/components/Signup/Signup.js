@@ -126,7 +126,10 @@ render() {
         </button>
         <div className="modal-header">
           <h3>Sign Up</h3>
-          <p>Already have an account? <Link to='/' className="nav-link" onClick={showLoginFunc}>Log in</Link></p>
+          <div className="to-login-container">
+            <p className="to-login-paragraph-1">Already have an account?</p>
+            <p className="to-login-paragraph-2"><Link to='/' className="nav-link" onClick={showLoginFunc}>Log in</Link></p>
+          </div>
         </div>
         <div className="modal-content">
             <p>Create an account to store your own curated list of parks!</p>

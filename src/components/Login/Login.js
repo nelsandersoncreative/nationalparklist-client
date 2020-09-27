@@ -55,8 +55,8 @@ class Login extends Component {
           <div className="login-header">
             <h3>Login</h3>
             <div className="to-register-container">
-            <p className="to-register-paragraph-1">Don't have an account? </p>
-            <p className="to-register-paragraph-2"><Link to='/' className="nav-link" onClick={showModalFunc}>Create an account</Link></p>
+              <p className="to-register-paragraph-1">Don't have an account? </p>
+              <p className="to-register-paragraph-2"><Link to='/' className="nav-link" onClick={showModalFunc}>Create an account</Link></p>
             </div>
           </div>
           <div className="login-content">

@@ -99,6 +99,16 @@
   margin-right: 10px;
 }
 
+.to-login-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.to-login-paragraph-2 {
+  padding-left: 10px;
+}
+
 
 @keyframes modalopen {
   from {
@@ -107,5 +117,16 @@
 
   to {
     opacity: 1;
+  }
+}
+
+@media (max-width: 780px) {
+  h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .to-login-paragraph-1, .to-login-paragraph-2 {
+    font-size: 15px;
   }
 }
