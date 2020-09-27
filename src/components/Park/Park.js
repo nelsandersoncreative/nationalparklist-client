@@ -69,7 +69,9 @@ class Park extends Component {
     return (
         <Fragment>
           <div className="park-page-header">
-            <Link to='/' className='btn btn-light'>Back to Search</Link>
+            <div>
+              <Link to='/' className='btn btn-light'>Back to Search</Link>
+            </div>
             <div className="entrance-fee-container"><p className="entrance-fee-span">Entrance fee:</p> <p className="entrance-fee">{entrenceFee}</p></div>
           </div>
           <div className="className card grid-2">

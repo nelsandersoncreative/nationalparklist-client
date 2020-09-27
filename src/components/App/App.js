@@ -82,6 +82,8 @@ class App extends Component {
                               <h2 className="landing-demo">Demo Login Account</h2>
                               <p className="landing-demo">Email:  sampleuser@sampleuser.com</p>
                               <p className="landing-demo">Password:  foobar</p>
+                              <br/>
+                              <p className="landing-demo">Log in to see this app's onboarding experience.</p>
                             </div>
                           </div>
                           <div>

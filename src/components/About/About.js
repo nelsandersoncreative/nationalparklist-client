@@ -16,15 +16,16 @@ const About = () => {
       <br/>
       <br/>
       <h2 className="about-h2">Does this app use any third-party APIs?</h2>
-      <div className="about-subtext">This app utilizes two third-party APIs:<br/>
+      <div className="about-subtext">
+      <p className="about-text">This app utilizes two third-party APIs:</p>
       <div className="api-cont"><p className="about-apis">The National Park Service's API:</p><a href="https://www.nps.gov/subjects/developer/api-documentation.htm" target="_blank" rel="noopener noreferrer">Click Here to Learn More about the National Parks Service API</a> <br /></div>
       <div className="api-cont"><p className="about-apis">The Open Weather API:</p><a href="https://openweathermap.org/api" target="_blank" rel="noopener noreferrer">Click Here to Learn More about the OpenWeather API</a></div></div>
       <br/>
       <br/>
-      <br/>
-      <br/>
       <h2 className="about-h2">This App's Latest Version:</h2>
       <p className="about-text">Version 1.0.0</p>
+      <br/>
+      <br/>
     </div>
   )
 }
