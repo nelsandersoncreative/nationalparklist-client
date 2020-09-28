@@ -1,6 +1,7 @@
 import config from '../config';
 import TokenService from './TokenService';
 
+// get user's park list
 const UserApiService = {
   async getUserParks(id) {
     const res = await fetch(`${config.API_ENDPOINT}/user-parks/${id}`, {

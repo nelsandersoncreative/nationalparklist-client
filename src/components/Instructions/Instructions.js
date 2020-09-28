@@ -1,7 +1,7 @@
 import React from 'react'
-import menuArrowUp from './menuArrowUp.png';
 import '../App/App.css';
 
+// instructions on how to use the app
 const Instructions = () => {
   return (
     <div>

@@ -1,6 +1,8 @@
 import React from 'react';
 import './About.css';
 
+
+// About page
 const About = () => {
   return (
     <div>

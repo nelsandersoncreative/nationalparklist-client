@@ -9,21 +9,16 @@ import About from '../About/About';
 import Signup from '../Signup/Signup';
 import Login from '../Login/Login';
 import Dashboard from '../Dashboard/Dashboard';
-
 import AppContext from '../../contexts/AppContext'
 import { withAppContext } from '../../contexts/AppContext'
 
 import './App.css';
 
+// main screen of app
 class App extends Component {
    static contextType = AppContext;
 
-  state = {
-    loggedIn: true,
-    sideNav: true,
-    sideNavClass: "dashboard show-nav"
-  }
-
+  // This error reners if there are any errors with Authorization
   renderAuthError = () => {
     return (
       <div className='auth-error'>
@@ -39,6 +34,10 @@ class App extends Component {
     )
   }
 
+  // render navbar
+  // login and signup forms are modal pop-ups
+  // render dashboard if logged in, don't render if not logged in
+  // render search bar and search results for parks
   render() {
     const { parks, park, showLogin, showModal, showModalFunc, hasAuth } = this.context;
     if (showModal) {
@@ -92,15 +91,15 @@ class App extends Component {
                     }
                   </div>
                   <Search
-                    showClear={(parks.data && parks.data.length> 0 ) ? true : false }/>
-                  <Parks parks={parks.data} />
+                    showClear={ (parks.data && parks.data.length> 0) ? true : false }/>
+                  <Parks parks={ parks.data } />
                 </Fragment>
               )}>
               </Route>
               <Route exact path='/about' component={About}/>
               <Route exact path='/park/:parkCode' 
               render={ props => ( 
-                <Park {...props} park={park} /> 
+                <Park { ...props } park={ park } /> 
                 )} 
               />
             </Switch>

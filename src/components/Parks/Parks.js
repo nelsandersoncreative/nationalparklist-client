@@ -6,6 +6,7 @@ import ParkItem from '../ParkItem/ParkItem';
 import AppContext from '../../contexts/AppContext'
 import { withAppContext } from '../../contexts/AppContext'
 
+// this component is the container for the list of parkItems generated on a home page search
 const Parks = ({ parks }) => {
   const appContext = useContext(AppContext);
   const { addParkToList, isLoading } = appContext;

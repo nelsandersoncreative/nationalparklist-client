@@ -7,6 +7,7 @@ import AppContext from '../../contexts/AppContext';
 import { withAppContext } from '../../contexts/AppContext';
 import './Signup.css';
 
+//signup form
 class Signup extends Component {
   
   static contextType = AppContext;
@@ -25,6 +26,7 @@ class Signup extends Component {
     this.setState({error: null})
   }
 
+  // handle signup form submission
   handleSubmit = async e => {
     e.preventDefault();
     this.setState({error: null})
@@ -50,12 +52,14 @@ class Signup extends Component {
     setLoading(false)
   }
 
+  // handle updates to the signup form
   handleChange = ({target: {name, value}}) => {
     this.setState({
       [name]: value
     }, name === 'password' ? this.validateUserPassword : null)
   }
 
+  // validate the form to make sure data is all to the correct specifications
   validateForm = () => {
     const {user_name_valid, emailValid, passwordValid} = this.state
     this.setState({
@@ -63,6 +67,7 @@ class Signup extends Component {
     })
   }
 
+  // username validation
   validateUserName = () => {
     let user_name_valid = true;
     const validationError = {...this.state.validationError}
@@ -79,6 +84,7 @@ class Signup extends Component {
     this.setState({user_name_valid, validationError}, this.validateForm)
   }
 
+  // email validation
   validateUserEmail = () => {
     let emailValid = true
     const validationError = {...this.state.validationError}
@@ -98,6 +104,7 @@ class Signup extends Component {
     this.setState({emailValid, validationError}, this.validateForm)
   }
 
+  // password validation
   validateUserPassword = () => {
     let passwordValid = true
     const validationError = {...this.state.validationError}

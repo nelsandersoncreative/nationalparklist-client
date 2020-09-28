@@ -1,0 +1,5 @@
+{
+  "terminal.explorerKind": "external",
+  "workbench.panel.defaultLocation": "right",
+  "terminal.integrated.automationShell.linux": ""
+}

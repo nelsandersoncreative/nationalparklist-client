@@ -5,26 +5,21 @@ import { withAppContext } from '../../contexts/AppContext';
 import Activities from '../Activities/Activities';
 import AppContext from '../../contexts/AppContext';
 import Spinner from '../Spinner/Spinner';
+import Utils from '../../services/Utils';
 import './Park.css';
 
-
-const toKelvin = temp => Math.floor((temp - 273.15)* 1.8000+ 32.00) + ' °F';
-
-const formatPhoneNumber = number => {
-  const isFormatted = n => n[0] === '(' || n[3] === '.' || n[3] === '-';
-  const format = n => '(' + n.slice(0, 3) + ') ' + n.slice(3, 6) + '-' + n.slice(6);
-  return number && number.length ? isFormatted(number) ? number : format(number) : 'No phone number available';
-}
-
+// This component is an individual park's unique info page which renders when the user clicks a Park's "More" button from a home page search or clicks the park name link in the user dashboard.
 
 class Park extends Component {
 
   static contextType = AppContext;
 
+  // handles receipt of API data for park with lodash
   componentDidMount() {
     this.context.getPark(get(this.props, 'match.params.parkCode', null));
   }
 
+  // handles receipt of updated API data for park with lodash
   componentDidUpdate(prevProps) {
     const code = get(this.props, 'match.params.parkCode', null);
     const previousCode = get(prevProps, 'match.params.parkCode', null);
@@ -33,6 +28,7 @@ class Park extends Component {
     }
   }
 
+  // handles loading spinner when API data is being gathered.
   renderLoading = () => (
     <div>
       <h3>Retrieving Park Data...</h3>
@@ -41,11 +37,13 @@ class Park extends Component {
   )
 
   render() {
-    const { addParkToList, currentWeather, hasAuth, showModalFunc } = this.context;
+    const { addParkToList, refreshParkPage, currentWeather, hasAuth, showModalFunc } = this.context;
     const park = get(this.props, 'park.data[0]');
-
+    
+    // show loading if data is still being fetched
     if (!park || this.props.loading) return this.renderLoading();
 
+    // handling clean receipt of API data for populating this component
     const {
       activities,
       fullName: parkName,
@@ -55,24 +53,24 @@ class Park extends Component {
       url
     } = park;
     const city = get(park, 'addresses[0].city', 'No city available');
-    const currentTemp = toKelvin(currentWeather);
+    const currentTemp = Utils.fromKelvin(currentWeather);
     const state = get(park, 'addresses[0].stateCode', 'No state available');
     const latLong = get(park, 'latLong', 'No lat/long coordinates available');
     const designation = get(park, 'designation', 'No designation available');
     const emailAddress = get(park, 'contacts.emailAddresses[0].emailAddress', 'No email address available');
-    const entrenceFee = get(park, 'entranceFees[0].title', 'No entrance fee information available');
+    const entranceFee = get(park, 'entranceFees[0].title', 'No entrance fee information available');
     const imageUrl = get(park, 'images[0].url');
     const operatingHours = get(park, 'operatingHours[0].description', 'No operating hours available');
     const parkObject = { parkCode, parkName, parkCity: `${city}, ${state}` };
-    const phoneNumber = formatPhoneNumber(get(park, 'contacts.phoneNumbers[0].phoneNumber'));
+    const phoneNumber = Utils.formatPhoneNumber(get(park, 'contacts.phoneNumbers[0].phoneNumber'));
 
     return (
         <Fragment>
-          <div className="park-page-header">
+          <div id="park-page" className="park-page-header">
             <div>
               <Link to='/' className='btn btn-light'>Back to Search</Link>
             </div>
-            <div className="entrance-fee-container"><p className="entrance-fee-span">Entrance fee:</p> <p className="entrance-fee">{entrenceFee}</p></div>
+            <div className="entrance-fee-container"><p className="entrance-fee-span">Entrance fee:</p> <p className="entrance-fee">{entranceFee}</p></div>
           </div>
           <div className="className card grid-2">
             <div className="all-center">
@@ -84,12 +82,15 @@ class Park extends Component {
             <div>
               {description &&
                 <Fragment>
+                {
+                  refreshParkPage(parkCode) ? <p className="park-added">Park has been added to your list!</p> : 
                   <button
                     className="btn btn-dark my-1"
                     onClick={hasAuth ? () => addParkToList(parkObject) : () => showModalFunc(true)}
                   >
                     <i className="fas fa-plus"></i> Add this park to my list
                   </button>
+                }
                   <h3>Description</h3>
                   <p className="parkDescription">{description}</p>
                 </Fragment>

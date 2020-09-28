@@ -84,6 +84,10 @@ img {
   padding: 5px;
 }
 
+h2.landing-demo {
+  margin-bottom: 15px;
+}
+
 .landing-demo {
   text-align: left;
   padding: 0;

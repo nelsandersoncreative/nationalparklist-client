@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import AppContext from '../../contexts/AppContext';
 import { withAppContext } from '../../contexts/AppContext';
 
+// the navbar component -- rendered at the top of the page in every view of the app
 const Navbar = () => {
   
   const appContext = useContext(AppContext);

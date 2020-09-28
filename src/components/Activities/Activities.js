@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import ActivityItem from './ActivityItem';
 
-
+//This component is the Activities container on each individual Park page
 const Activities = ({ activities }) => (
   <Fragment>
     <h1 className="text-center">Activities:</h1>

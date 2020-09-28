@@ -7,7 +7,7 @@ import { withAppContext } from '../../contexts/AppContext';
 import './Login.css';
 import ErrorImage from './error.svg';
 
-
+// the login form component
 class Login extends Component {
 
   static contextType = AppContext;
@@ -18,6 +18,9 @@ class Login extends Component {
     password: ''
   }
 
+  // handles user login.
+  // saves email and password to this component's state
+  // runs a helper functions to get a token and log the user in.
   handleSubmit = async (e) => {
     
     e.preventDefault();
@@ -37,6 +40,7 @@ class Login extends Component {
     }
   }
 
+  // handles the user's login form input, storing it in state as it is updated
   handleChange = ({ target: { name, value } }) => {
     this.setState({
       [name]: value

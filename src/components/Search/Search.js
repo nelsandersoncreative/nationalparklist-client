@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import AppContext from '../../contexts/AppContext';
 import { withAppContext } from '../../contexts/AppContext';
 
+// The search bar component found on the home page
 class Search extends Component {
   static contextType = AppContext;
 
@@ -9,10 +10,12 @@ class Search extends Component {
     text: ''
   }
 
+  // handles inputs into the search bar on the home page.
   onChange = (e) => {
     this.setState({ [e.target.name]: e.target.value });
   }
 
+  // handles query submission for the search bar on the home page
   onSubmit = (e) => {
     e.preventDefault();
     this.context.clearParks();

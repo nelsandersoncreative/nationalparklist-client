@@ -1,15 +1,28 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { HashLink as Link } from 'react-router-hash-link';
 
 import './Dashboard.css';
 
 import AppContext from '../../contexts/AppContext';
 import { withAppContext } from '../../contexts/AppContext';
 
+// The user dashboard component when a user is logged in.  Displays salutation and user park list.
 export const Dashboard = () => {
 
   const appContext = useContext(AppContext);
   const { userParkList, removeParkFromList, currentUser } = appContext;
+
+  // When an onClick event occurs on a park name link in the user's  dashboard...change it's color
+  function changeBackground(e) {
+    e.target.style.background = 'white';
+    e.target.style.color = 'blue';
+  }
+
+  // When onMouseLeave event occurs on a park name link in the user's dashboard...change it's color back to the original
+  function originalBackground(e) {
+    e.target.style.background = 'blue';
+    e.target.style.color = 'white';
+  }
 
   return (
       <div className="user-dashboard">
@@ -26,14 +39,16 @@ export const Dashboard = () => {
             return (
               <div className="park-grid-item" key={index}>
                 <div>
-                  {<Link to={`${code}`} className="parkList-link">{name}</Link>}
+                  {<Link to={`${code}#park-page`} onClick={changeBackground} onMouseLeave={originalBackground} className="parkList-link">{name}</Link>}
                   <p className="parkcity">{city}</p>
                 </div>
                 <button className="dash-delete" onClick={() => removeParkFromList(index, park.parkCode)}>Delete park</button>
               </div>
             )
           })}
+          
         </div>
+        
         : <div><p className="park-placeholder">No parks have been added to your list.</p></div>
         }
       </div>

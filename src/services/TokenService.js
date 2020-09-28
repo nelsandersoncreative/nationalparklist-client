@@ -1,5 +1,6 @@
 import config from '../config'
 
+// functions for handling auth tokens, saving, removing and verifying them in relation to localStorage
 const TokenService = {
   saveAuthToken(token) {
     window.localStorage.setItem(config.TOKEN_KEY, token)
