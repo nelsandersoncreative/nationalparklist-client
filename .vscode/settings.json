@@ -1,5 +1,10 @@
 {
   "terminal.explorerKind": "external",
   "workbench.panel.defaultLocation": "right",
-  "terminal.integrated.automationShell.linux": ""
+  "terminal.integrated.automationShell.linux": "",
+  "eslint.nodePath": "",
+  "workbench.settings.editor": "ui",
+  "editor.formatOnSave": true,
+  "prettier.singleQuote": true,
+  "prettier.jsxSingleQuote": true
 }
