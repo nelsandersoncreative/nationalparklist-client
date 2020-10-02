@@ -444,7 +444,12 @@ table th {
   margin-right: 0.6rem;
 }
 
-p, h1, h2, h3, h4, h5 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5 {
   text-align: center;
 }
 
@@ -493,7 +498,8 @@ p, h1, h2, h3, h4, h5 {
 }
 
 /* Signup */
-button, input[type='submit'] {
+button,
+input[type='submit'] {
   background-color: var(--primary-color);
   border: 0;
   border-radius: 5px;
@@ -517,7 +523,6 @@ button:focus {
 
 /* Tablet Styles */
 @media (max-width: 780px) {
-
   .navbar {
     flex-direction: column;
   }
@@ -526,7 +531,7 @@ button:focus {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 1rem;
   }
-  
+
   .first-visit-welcome {
     display: flex;
     flex-direction: column;
@@ -562,12 +567,10 @@ button:focus {
     grid-template-columns: repeat(2, 1fr);
     text-align: left;
   }
-
 }
 
 /* Mobile Styles */
 @media (max-width: 700px) {
-  
   .navbar-main {
     font-size: 35px;
   }
@@ -604,5 +607,10 @@ button:focus {
   .navbar ul {
     text-align: center;
     justify-content: center;
+  }
+
+  .parks-grid {
+    grid-template-columns: repeat(1, 1fr);
+    text-align: center;
   }
 }
