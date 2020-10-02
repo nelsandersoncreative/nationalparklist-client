@@ -25,18 +25,24 @@ const Utils = {
   cityFormat(parkAddress) {
     if (parkAddress === undefined) {
       return 'no city available';
-    } else {
-      return parkAddress[0] ? parkAddress[0].city : 'no city available';
-    };
+    } return parkAddress[0] ? parkAddress[0].city : 'no city available';
   },
 
   // format the state that displays under the park title and picture for a Park Page
   stateFormat(address) {
     if (address === undefined) {
       return 'no city available';
-    } else {
-      return address[0] ? address[0].stateCode : 'no state available';
-    }
+    } return address[0] ? address[0].stateCode : 'no state available';
+  },
+
+  // generate uuid for unique keys for .map() generated components
+  uuidv4() {
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g,
+      (c) => {
+        // eslint-disable-next-line
+        const r = Math.random() * 16 | 0, v = c === 'x' ? r : (r & 0x3 | 0x8);
+        return v.toString(16);
+      });
   },
 };
 

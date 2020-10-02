@@ -8,10 +8,10 @@ import AppError from './components/AppError/AppError';
 ReactDOM.render(
   <AppError>
     <BrowserRouter>
-      <AppProvider>    
+      <AppProvider>
         <App />
       </AppProvider>
     </BrowserRouter>
   </AppError>,
-  document.getElementById('root')
+  document.getElementById('root'),
 );

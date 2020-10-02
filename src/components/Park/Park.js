@@ -1,7 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import { get } from 'lodash';
 import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
 import AppContext, { withAppContext } from '../../contexts/AppContext';
 import Activities from '../Activities/Activities';
 import Spinner from '../Spinner/Spinner';
@@ -12,10 +11,6 @@ import './Park.css';
 
 class Park extends Component {
   static contextType = AppContext;
-
-  static propTypes = {
-    loading: PropTypes.bool,
-  };
 
   // handles receipt of API data for park with lodash
   componentDidMount() {
@@ -77,14 +72,14 @@ class Park extends Component {
           <div>
             <Link to='/' className='btn btn-light'>Back to Search</Link>
           </div>
-          <div className="entrance-fee-container">
-            <p className="entrance-fee-span">Entrance fee:</p>
-            <p className="entrance-fee">{entranceFee}</p>
+          <div className='entrance-fee-container'>
+            <p className='entrance-fee-span'>Entrance fee:</p>
+            <p className='entrance-fee'>{entranceFee}</p>
           </div>
         </div>
-        <div className="className card grid-2">
-          <div className="all-center">
-            <img src={imageUrl} className="round-img" alt="" style={{ width: '150px', height: '150px' }} />
+        <div className='className card grid-2'>
+          <div className='all-center'>
+            <img src={imageUrl} className='round-img' alt='' style={{ width: '150px', height: '150px' }} />
             <h1>{parkName}</h1>
             <p>
               Location:&nbsp;&nbsp;
@@ -99,51 +94,63 @@ class Park extends Component {
             </p>
           </div>
           <div>
-            {description && <Fragment>
-              {
-                refreshParkPage(parkCode) ? <p className="park-added">Park has been added to your list!</p> :
-                  <button
-                    className="btn btn-dark my-1"
-                    onClick={hasAuth ? () => addParkToList(parkObject) : () => showModalFunc(true)}
-                  >
-                    <i className="fas fa-plus"></i> Add this park to my list
-                  </button>
-              }
-              <h3>Description</h3>
-              <p className="parkDescription">{description}</p>
-            </Fragment>
-            }
-            <a href={url} target="_blank" rel="noopener noreferrer" className="btn btn-dark my-1">Visit the {parkName} website</a>
+            {description && (
+              <Fragment>
+                {
+                  refreshParkPage(parkCode) ? <p className='park-added'>Park has been added to your list!</p>
+                    : (
+                      <button
+                        type='button'
+                        className='btn btn-dark my-1'
+                        onClick={hasAuth ? () => addParkToList(parkObject)
+                          : () => showModalFunc(true)}
+                      >
+                        <i className='fas fa-plus' />
+                        &nbsp;Add this park to my list
+                      </button>
+                    )
+                }
+                <h3>Description</h3>
+                <p className='parkDescription'>{description}</p>
+              </Fragment>
+            )}
+            <a href={url} target='_blank' rel='noopener noreferrer' className='btn btn-dark my-1'>Visit the {parkName} website</a>
             <ul>
               <li>
-                {operatingHours &&
+                {
+                  operatingHours
+                  && (
                   <Fragment>
-                    <h3>Operating Hours</h3>
-                    <p className="park-info">{operatingHours}</p>
+                    <h3>
+                      Operating Hours
+                    </h3>
+                    <p className='park-info'>{operatingHours}</p>
                   </Fragment>
+                  )
                 }
               </li>
               <li>
-                {directionsInfo &&
+                {directionsInfo
+                  && (
                   <Fragment>
                     <br />
                     <h3>Directions</h3>
-                    <p className="park-info">{directionsInfo}</p>
+                    <p className='park-info'>{directionsInfo}</p>
                   </Fragment>
-                }
+                  )}
               </li>
             </ul>
           </div>
         </div>
-        <div className="park-contact-info">
-          <div className="badge badge-primary">{phoneNumber}</div>
-          <div className="badge badge-success">{emailAddress}</div>
-          {designation && <div className="badge badge-light">{designation}</div>}
-          <div className="badge badge-dark">{latLong}</div>
+        <div className='park-contact-info'>
+          <div className='badge badge-primary'>{phoneNumber}</div>
+          <div className='badge badge-success'>{emailAddress}</div>
+          {designation && <div className='badge badge-light'>{designation}</div>}
+          <div className='badge badge-dark'>{latLong}</div>
         </div>
         <Activities activities={activities} />
       </Fragment>
-    )
+    );
   }
 }
 

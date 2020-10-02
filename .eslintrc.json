@@ -9,15 +9,16 @@
     "object-shorthand": "off",
     "class-methods-use-this": "off",
     "react/jsx-filename-extension": "off",
-    "react/jsx-fragments": "off"
-    // "react/static-property-placement": [
-    //   "warn",
-    //   "property assignment",
-    //   {
-    //     "contextType": "static public field",
-    //     "propTypes": "static public field"
-    //   }
-    // ]
+    "react/jsx-fragments": "off",
+    "jsx-quotes": ["error", "prefer-single"],
+    "react/static-property-placement": [
+      "warn",
+      "property assignment",
+      {
+        "contextType": "static public field",
+        "propTypes": "static public field"
+      }
+    ]
   },
   "parserOptions": {
     "sourceType": "module"
