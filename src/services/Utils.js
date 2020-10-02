@@ -16,7 +16,7 @@ const Utils = {
 
   // handles formatting for phone number data from National Park Service API
   formatPhoneNumber(number) {
-    const isFormatted = n => n[0] === '(' || n[3] === '.' || n[3] === '-';
+    const isFormatted = (n) => n[0] === '(' || n[3] === '.' || n[3] === '-';
     const format = n => '(' + n.slice(0, 3) + ') ' + n.slice(3, 6) + '-' + n.slice(6);
     return number && number.length ? isFormatted(number) ? number : format(number) : 'No phone number available';
   },

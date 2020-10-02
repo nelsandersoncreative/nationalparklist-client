@@ -8,12 +8,12 @@ const UserApiService = {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Bearer ${TokenService.getAuthToken()}`
-      }
-    })
+        Authorization: `Bearer ${TokenService.getAuthToken()}`,
+      },
+    });
 
     if (!res.ok) {
-      return res.json().then(e => Promise.reject(e))
+      return res.json().then((e) => Promise.reject(e));
     }
     return res.json();
   },
